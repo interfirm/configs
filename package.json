@@ -1,0 +1,14 @@
+{
+  "name": "@interfirm/configs",
+  "version": "0.0.0",
+  "description": "Manage common config files for interfirm projects",
+  "scripts": {
+    "lint": "eslint --fix .",
+    "test": "echo TODO: Check all source files exist"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-interfirm": "^2.1.0"
+  }
+}
