@@ -1,0 +1,75 @@
+AllCops:
+  TargetRubyVersion: 2.3
+  TargetRailsVersion: 5.0
+  Exclude:
+    - "bin/**/*"
+    - "db/**/*"
+    - "config/**/*"
+    - "log/**/*"
+    - "public/**/*"
+    - "tmp/**/*"
+    - "vendor/**/*"
+    - "node_modules/**/*"
+  UseCache: true
+  DisplayCopNames: true
+  DisplayStyleGuide: true
+
+Rails:
+  Enabled: true
+
+# TODO: Enable after the issue is fixed: https://github.com/bbatsov/rubocop/pull/4237
+Lint/AmbiguousBlockAssociation:
+  Enabled: false
+
+Style/TrailingCommaInLiteral:
+  Enabled: true
+  EnforcedStyleForMultiline: comma
+
+Style/TrailingCommaInArguments:
+  Enabled: true
+  EnforcedStyleForMultiline: comma
+
+# Allow Japanese comments.
+Style/AsciiComments:
+  Enabled: false
+
+Style/DotPosition:
+  Enabled: true
+  EnforcedStyle: trailing
+
+Style/StringLiterals:
+  Enabled: true
+  EnforcedStyle: double_quotes
+
+Metrics/LineLength:
+  Enabled: true
+  Max: 100
+
+Metrics/ClassLength:
+  Enabled: true
+  Max: 100
+  Exclude:
+    - "test/**/*"
+    - "spec/**/*"
+
+Metrics/MethodLength:
+  Enabled: true
+  CountComments: false
+  Max: 20
+  Exclude:
+    - "test/**/*"
+    - "spec/**/*"
+
+Metrics/BlockLength:
+  Enabled: true
+  Exclude:
+    - "test/**/*"
+    - "spec/**/*"
+    - "**/*.jbuilder"
+
+Metrics/AbcSize:
+  Enabled: true
+  Max: 25
+  Exclude:
+    - "test/**/*"
+    - "spec/**/*"
