@@ -19,14 +19,14 @@ Example:
 
 ```js
 {
-  // "key": boolean || [boolean, distPath]
+  // "key": boolean || [boolean, destinationPath]
   "reek": true,
   "codeclimate": true,
   "rubocop": [true, ".rubocop.base.yml"]
 }
 ```
 
-If you omit `distPath`, config files are copied to default path.
+If you omit `destinationPath`, config files are copied to default path.
 
 ## Available config files
 

@@ -2,8 +2,8 @@ const fs = require("fs")
 const path = require("path")
 const configFiles = require("./config-files")
 
-const copyFile = (src, dist) => {
-  fs.createReadStream(src).pipe(fs.createWriteStream(dist))
+const copyFile = (src, dest) => {
+  fs.createReadStream(src).pipe(fs.createWriteStream(dest))
 }
 
 /**
@@ -30,17 +30,17 @@ const syncConfigFiles = (userRepoDir, userConfig, allConfigs) => {
       throw new Error(`Invalid config file key: ${key}`)
     }
 
-    const [shouldCopy, distFile] = normalizeOption(userConfig[key])
+    const [shouldCopy, destFile] = normalizeOption(userConfig[key])
     if (!shouldCopy) {
       return
     }
 
     const defaultPath = allConfigs[key]
     const srcPath = path.join(__dirname, "templates", defaultPath)
-    const distPath = path.join(userRepoDir, distFile || defaultPath)
+    const destPath = path.join(userRepoDir, destFile || defaultPath)
 
-    console.log(`Sync config: '${srcPath}' to '${distPath}'`)
-    copyFile(srcPath, distPath)
+    console.log(`Sync config: '${srcPath}' to '${destPath}'`)
+    copyFile(srcPath, destPath)
   })
 }
 
