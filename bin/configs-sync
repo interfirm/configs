@@ -1,0 +1,18 @@
+#!/usr/bin/env node
+
+const fs = require("fs")
+const executeSync = require("..")
+
+// Run this script only when a user installs this package.
+// Do nothing when we install dependencies of this package.
+if (fs.existsSync(".git")) {
+  return
+}
+
+try {
+  executeSync()
+} catch (err) {
+  console.error("@interfirm/configs: Failed to synchronize config")
+  console.error(err)
+  process.exit(1)
+}
