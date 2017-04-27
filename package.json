@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "Manage common config files for interfirm projects",
   "scripts": {
-    "postinstall": "bin/sync",
+    "postinstall": "bin/configs-sync",
     "lint": "eslint --fix .",
     "test": "echo TODO: Check all source files exist"
   },
