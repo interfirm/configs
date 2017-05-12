@@ -5,7 +5,7 @@
   "scripts": {
     "postinstall": "bin/configs-sync",
     "lint": "eslint --fix . bin/*",
-    "test": "echo TODO: Check all source files exist"
+    "test": "./test.sh"
   },
   "bin": {
     "configs-sync": "bin/configs-sync"
