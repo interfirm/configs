@@ -6,7 +6,7 @@ const executeSync = require("..")
 // Run this script only when a user installs this package.
 // Do nothing when we install dependencies of this package.
 if (fs.existsSync(".dev-repo")) {
-  return
+  process.exit()
 }
 
 try {

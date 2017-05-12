@@ -4,7 +4,7 @@
   "description": "Manage common config files for interfirm projects",
   "scripts": {
     "postinstall": "bin/configs-sync",
-    "lint": "eslint --fix .",
+    "lint": "eslint --fix . bin/*",
     "test": "echo TODO: Check all source files exist"
   },
   "bin": {
