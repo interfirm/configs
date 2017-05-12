@@ -2,6 +2,9 @@ language: node_js
 
 cache: yarn
 
+script:
+  - yarn lint
+
 notifications:
   email: false
   slack: interfirm:L2WhP1umnVtkeYcz6Uedkocs#developer
