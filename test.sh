@@ -9,13 +9,9 @@ mkdir $WORKDIR
 cd $WORKDIR
 yarn init -y
 
-echo '{}' > if-configs.json
-
 # test local
 yarn add --dev "file:$(dirname $(pwd))"
-
-# test remote
-yarn add --dev @interfirm/configs
+ls -l node_modules/@interfirm/configs
 
 # teardown
 cd ..

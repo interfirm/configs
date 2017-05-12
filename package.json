@@ -4,12 +4,18 @@
   "description": "Manage common config files for interfirm projects",
   "scripts": {
     "postinstall": "bin/configs-sync",
-    "lint": "eslint --fix . bin/*",
-    "test": "./test.sh"
+    "lint": "eslint --ignore-path=.gitignore --fix . bin/*",
+    "test": "node test.js && ./test.sh"
   },
+  "main": "index.js",
   "bin": {
     "configs-sync": "bin/configs-sync"
   },
+  "files": [
+    "bin",
+    "config-files.js",
+    "templates"
+  ],
   "license": "MIT",
   "devDependencies": {
     "eslint": "^3.19.0",
