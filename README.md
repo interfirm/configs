@@ -39,3 +39,17 @@ If you omit `destinationPath`, config files are copied to default path.
 | [Code Climate](https://codeclimate.com/) | codeclimate | .codeclimate.yml |
 | [Rubocop](https://github.com/bbatsov/rubocop) | rubocop | .rubocop.yml |
 | [EditorConfig](http://editorconfig.org/) | editorconfig | .editorconfig |
+
+## Release
+
+1. Run [`npm version`](https://docs.npmjs.com/cli/version) command.
+2. Push new tag to remote repository.
+3. New version will be published by Travis automatically.
+
+Example:
+
+``` sh
+$ npm version minor
+$ git push origin master
+$ git push --tags
+```
