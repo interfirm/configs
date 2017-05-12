@@ -1,3 +1,6 @@
+[![NPM version](https://img.shields.io/npm/v/@interfirm/configs.svg)](https://www.npmjs.com/package/@interfirm/configs)
+[![Build Status](https://travis-ci.com/interfirm/configs.svg?token=z7WQGZviWBM4zmGAt52E)](https://travis-ci.com/interfirm/configs)
+
 # INTERFIRM Configs
 
 This repository manages common config files for INTERFIRM projects.
@@ -8,7 +11,7 @@ All config files are in `/templates` directory.
 1. Put `if-configs.json` at the root directory of your repository
 1. Install via npm/yarn: `yarn add --dev @interfirm/configs`
 
-This package automatically copies config files to the installed repository when downloaded into your `node_modules`. 
+This package automatically copies config files to the installed repository when downloaded into your `node_modules`.
 
 ## Configuration
 
