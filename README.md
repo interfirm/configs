@@ -9,7 +9,7 @@ All config files are in `/templates` directory.
 ## Usage
 
 1. Edit `@interfirm/configs` entry in `package.json`.
-2. Install via npm/yarn:
+2. Install via `npm` or `yarn`:
 
 ```
 npm install --save-dev @interfirm/configs
@@ -34,7 +34,7 @@ Default configuration:
   "@interfirm/configs": {
     "reek": true,
     "codeclimate": true,
-    "rubocop": [true, ".rubocop.base.yml"],
+    "rubocop": true,
     "editorconfig": true
   }
 }
