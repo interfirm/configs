@@ -39,29 +39,37 @@ const syncConfigFiles = (userRepoDir, userConfig, allConfigs) => {
     const srcPath = path.join(__dirname, "templates", defaultPath)
     const destPath = path.join(userRepoDir, destFile || defaultPath)
 
-    console.log(`Sync config: '${srcPath}' to '${destPath}'`)
+    console.log(`Sync config: ${destPath}`)
     copyFile(srcPath, destPath)
   })
+}
+
+const FILE_ENCODING = "utf8"
+
+const PACKAGE_JSON = "package.json"
+
+const CONFIG_KEY = "@interfirm/configs"
+
+const DEFAULT_CONFIG = {
+  reek: true,
+  codeclimate: true,
+  rubocop: [true, ".rubocop.base.yml"],
+  editorconfig: true,
 }
 
 /**
  * Execute synchronization.
  */
-const executeSync = () => {
-  const parentDir = path.resolve(__dirname, "..")
+const executeSync = (parentDir) => {
   const userRepoDir = findNearestNodeDir(parentDir)
 
   if (userRepoDir == null) {
-    throw new Error("No package.json found")
+    throw new Error(`No ${PACKAGE_JSON} found`)
   }
 
-  const configPath = path.join(userRepoDir, "if-configs.json")
+  const pkg = JSON.parse(fs.readFileSync(PACKAGE_JSON, FILE_ENCODING))
+  const userConfig = pkg[CONFIG_KEY] || DEFAULT_CONFIG
 
-  if (!fs.existsSync(configPath)) {
-    throw new Error(`No config file found: ${configPath}`)
-  }
-
-  const userConfig = JSON.parse(fs.readFileSync(configPath))
   syncConfigFiles(userRepoDir, userConfig, configFiles)
 }
 

@@ -8,24 +8,35 @@ All config files are in `/templates` directory.
 
 ## Usage
 
-1. Put `if-configs.json` at the root directory of your repository
-1. Install via npm/yarn: `yarn add --dev @interfirm/configs`
+1. Edit `@interfirm/configs` entry in `package.json`.
+2. Install via npm/yarn:
+
+```
+npm add --save-dev @interfirm/configs
+```
+
+```
+yarn add --dev @interfirm/configs
+```
 
 This package automatically copies config files to the installed repository when downloaded into your `node_modules`.
 
 ## Configuration
 
-By default, this package doesn't copy any files.
-To copy config files, you need to configure which config file should be copied via `if-configs.json`.
+```
+"key": boolean || [boolean, destinationPath]
+```
 
-Example:
+Default configuration:
 
-```js
+```json
 {
-  // "key": boolean || [boolean, destinationPath]
-  "reek": true,
-  "codeclimate": true,
-  "rubocop": [true, ".rubocop.base.yml"]
+  "@interfirm/configs": {
+    "reek": true,
+    "codeclimate": true,
+    "rubocop": [true, ".rubocop.base.yml"],
+    "editorconfig": true
+  }
 }
 ```
 

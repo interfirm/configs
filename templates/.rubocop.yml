@@ -3,7 +3,7 @@ AllCops:
   TargetRailsVersion: 5.0
   Exclude:
     - "bin/**/*"
-    - "db/**/*"
+    - "db/schema.rb"
     - "config/**/*"
     - "log/**/*"
     - "public/**/*"
@@ -19,6 +19,10 @@ Rails:
 
 # TODO: Enable after the issue is fixed: https://github.com/bbatsov/rubocop/pull/4237
 Lint/AmbiguousBlockAssociation:
+  Enabled: false
+
+# Top-level class documentation comment is unnecessary in most cases
+Style/Documentation:
   Enabled: false
 
 Style/TrailingCommaInLiteral:
