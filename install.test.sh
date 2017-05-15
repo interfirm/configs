@@ -1,5 +1,5 @@
 #!/bin/sh
-set -e
+set -eux
 
 WORKDIR=tmp
 
@@ -7,11 +7,14 @@ WORKDIR=tmp
 rm -rf $WORKDIR
 mkdir $WORKDIR
 cd $WORKDIR
-yarn init -y
+npm init -y
 
 # test local
-yarn add --dev "file:$(dirname $(pwd))"
-ls -l node_modules/@interfirm/configs
+npm install --save-dev "file:$(dirname $(pwd))" --no-progress
+test -f .codeclimate.yml
+test -f .config.reek
+test -f .editorconfig
+test -f .rubocop.base.yml
 
 # teardown
 cd ..

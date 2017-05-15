@@ -11,7 +11,7 @@ if (fs.existsSync(".dev-repo")) {
 }
 
 try {
-  executeSync(path.resolve(__dirname, ".."))
+  executeSync(path.resolve(__dirname, "..", ".."))
 } catch (err) {
   console.error("@interfirm/configs: Failed to synchronize config")
   console.error(err)
