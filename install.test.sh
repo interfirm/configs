@@ -14,7 +14,7 @@ npm install --save-dev "file:$(dirname $(pwd))" --no-progress
 test -f .codeclimate.yml
 test -f .config.reek
 test -f .editorconfig
-test -f .rubocop.base.yml
+test -f .rubocop.yml
 
 # teardown
 cd ..

@@ -53,7 +53,7 @@ const CONFIG_KEY = "@interfirm/configs"
 const DEFAULT_CONFIG = {
   reek: true,
   codeclimate: true,
-  rubocop: [true, ".rubocop.base.yml"],
+  rubocop: true,
   editorconfig: true,
 }
 
