@@ -6,6 +6,8 @@ LongParameterList:
   enabled: false
 UnusedParameters:
   enabled: false
+IrresponsibleModule:
+  enabled: false
 
 FeatureEnvy:
   enabled: false
@@ -28,18 +30,19 @@ NestedIterators:
 
 # https://github.com/troessner/reek#working-with-rails
 "app/controllers":
-  InstanceVariableAssumption:
-    enabled: false
   IrresponsibleModule:
     enabled: false
+  NestedIterators:
+    max_allowed_nesting: 2
   UnusedPrivateMethod:
+    enabled: false
+  InstanceVariableAssumption:
     enabled: false
 "app/helpers":
   IrresponsibleModule:
     enabled: false
-"test":
-  IrresponsibleModule:
+  UtilityFunction:
     enabled: false
-"spec":
-  IrresponsibleModule:
+"app/mailers":
+  InstanceVariableAssumption:
     enabled: false
