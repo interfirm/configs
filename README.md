@@ -12,7 +12,7 @@ All config files are in `/templates` directory.
 2. Install via npm/yarn:
 
 ```
-npm add --save-dev @interfirm/configs
+npm install --save-dev @interfirm/configs
 ```
 
 ```
