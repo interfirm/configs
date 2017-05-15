@@ -14,7 +14,7 @@ process.chdir(workdir)
 fs.writeFileSync("package.json", JSON.stringify({
   "@interfirm/configs": {
     reek: true,
-    codeclimate: true,
+    codeclimate: [true, ".codeclimate.test.yml"],
     rubocop: [true, ".rubocop.base.yml"],
     editorconfig: true,
   },
@@ -23,6 +23,7 @@ fs.writeFileSync("package.json", JSON.stringify({
 executeSync(process.cwd())
 
 assert(fs.existsSync(".config.reek"))
-assert(fs.existsSync(".codeclimate.yml"))
+assert(!fs.existsSync(".codeclimate.yml"))
+assert(fs.existsSync(".codeclimate.test.yml"))
 assert(fs.existsSync(".rubocop.base.yml"))
 assert(fs.existsSync(".editorconfig"))
