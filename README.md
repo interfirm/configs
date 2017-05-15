@@ -53,14 +53,14 @@ If you omit `destinationPath`, config files are copied to default path.
 
 ## Release
 
-1. Run [`npm version`](https://docs.npmjs.com/cli/version) command.
+1. Run [`yarn version`](https://yarnpkg.com/en/docs/cli/version) command.
 2. Push new tag to remote repository.
 3. New version will be published by Travis automatically.
 
 Example:
 
 ``` sh
-$ npm version minor
+$ yarn version
 $ git push origin master
 $ git push --tags
 ```
