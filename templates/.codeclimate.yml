@@ -29,7 +29,7 @@ ratings:
   - "**.module"
 exclude_paths:
 - config/**/*
-- db/**/*
+- db/schema.rb
 - vendor/**/*
 - spec/**/*
 - test/**/*
