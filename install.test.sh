@@ -12,7 +12,7 @@ node -p 'JSON.stringify(Object.assign(require("./package.json"),{"@interfirm/con
 mv package.json.new package.json
 
 # test
-function assert() {
+assert() {
   test -f .codeclimate.yml
   test -f .config.reek
   test -f .editorconfig
