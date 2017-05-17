@@ -8,13 +8,8 @@ rm -rf $WORKDIR
 mkdir $WORKDIR
 cd $WORKDIR
 npm init -y
-cat <<JS >update-package.js
-const fs = require("fs");
-const pkg = JSON.parse(fs.readFileSync("package.json", "utf8"));
-pkg["@interfirm/configs"] = { rubocop: [true, ".rubocop.base.yml"] };
-fs.writeFileSync("package.json", JSON.stringify(pkg, null, 2), "utf8");
-JS
-node update-package.js
+node -p 'JSON.stringify(Object.assign(require("./package.json"),{"@interfirm/configs":{rubocop:[true,".rubocop.base.yml"]}}),null,2)' > package.json.new
+mv package.json.new package.json
 
 # test
 function assert() {
