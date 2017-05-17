@@ -67,8 +67,9 @@ const executeSync = (parentDir) => {
     throw new Error(`No ${PACKAGE_JSON} found`)
   }
 
-  const pkg = JSON.parse(fs.readFileSync(PACKAGE_JSON, FILE_ENCODING))
-  const userConfig = pkg[CONFIG_KEY] || DEFAULT_CONFIG
+  const pkgFile = path.join(userRepoDir, PACKAGE_JSON)
+  const pkg = JSON.parse(fs.readFileSync(pkgFile, FILE_ENCODING))
+  const userConfig = Object.assign({}, DEFAULT_CONFIG, pkg[CONFIG_KEY])
 
   syncConfigFiles(userRepoDir, userConfig, configFiles)
 }
