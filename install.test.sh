@@ -8,13 +8,27 @@ rm -rf $WORKDIR
 mkdir $WORKDIR
 cd $WORKDIR
 npm init -y
+node -p 'JSON.stringify(Object.assign(require("./package.json"),{"@interfirm/configs":{rubocop:[true,".rubocop.base.yml"]}}),null,2)' > package.json.new
+mv package.json.new package.json
 
-# test local
-npm install --save-dev "file:$(dirname $(pwd))" --no-progress
-test -f .codeclimate.yml
-test -f .config.reek
-test -f .editorconfig
-test -f .rubocop.yml
+# test
+assert() {
+  test -f .codeclimate.yml
+  test -f .config.reek
+  test -f .editorconfig
+  test ! -f .rubocop.yml
+  test -f .rubocop.base.yml
+}
+
+npm install --no-progress --save-dev "file:$(dirname $(pwd))"
+cat package.json
+assert
+
+yarn install --no-progress
+assert
+
+yarn upgrade --no-progress
+assert
 
 # teardown
 cd ..
