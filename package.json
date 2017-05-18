@@ -2,12 +2,11 @@
   "name": "@interfirm/configs",
   "version": "0.1.5",
   "description": "Manage common config files for interfirm projects",
-  "scripts": {
-    "postinstall": "bin/configs-sync",
-    "lint": "eslint --ignore-path=.gitignore --fix . bin/*",
-    "test": "node test.js && ./install.test.sh"
-  },
   "main": "index.js",
+  "repository": "interfirm/configs",
+  "homepage": "https://github.com/interfirm/configs",
+  "bugs": "https://github.com/interfirm/configs/issues",
+  "license": "MIT",
   "bin": {
     "configs-sync": "bin/configs-sync"
   },
@@ -16,7 +15,11 @@
     "config-files.js",
     "templates"
   ],
-  "license": "MIT",
+  "scripts": {
+    "postinstall": "bin/configs-sync",
+    "lint": "eslint --ignore-path=.gitignore --fix . bin/*",
+    "test": "node test.js && ./install.test.sh"
+  },
   "devDependencies": {
     "eslint": "*",
     "eslint-config-interfirm": "*"
