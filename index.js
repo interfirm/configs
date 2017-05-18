@@ -2,6 +2,19 @@ const fs = require("fs")
 const path = require("path")
 const configFiles = require("./config-files")
 
+const FILE_ENCODING = "utf8"
+
+const PACKAGE_JSON = "package.json"
+
+const CONFIG_KEY = "@interfirm/configs"
+
+const DEFAULT_CONFIG = {
+  reek: true,
+  codeclimate: true,
+  rubocop: true,
+  editorconfig: true,
+}
+
 const copyFile = (src, dest) => {
   fs.createReadStream(src).pipe(fs.createWriteStream(dest))
 }
@@ -10,7 +23,7 @@ const copyFile = (src, dest) => {
  * Find a nearest parent directory which has a package.json
  */
 const findNearestNodeDir = (dir) => {
-  if (fs.existsSync(path.join(dir, "package.json"))) {
+  if (fs.existsSync(path.join(dir, PACKAGE_JSON))) {
     return dir
   }
 
@@ -42,19 +55,6 @@ const syncConfigFiles = (userRepoDir, userConfig, allConfigs) => {
     console.log(`Sync config: ${destPath}`)
     copyFile(srcPath, destPath)
   })
-}
-
-const FILE_ENCODING = "utf8"
-
-const PACKAGE_JSON = "package.json"
-
-const CONFIG_KEY = "@interfirm/configs"
-
-const DEFAULT_CONFIG = {
-  reek: true,
-  codeclimate: true,
-  rubocop: true,
-  editorconfig: true,
 }
 
 /**
