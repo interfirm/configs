@@ -1,5 +1,5 @@
 [![NPM version](https://img.shields.io/npm/v/@interfirm/configs.svg)](https://www.npmjs.com/package/@interfirm/configs)
-[![Build Status](https://travis-ci.com/interfirm/configs.svg?token=z7WQGZviWBM4zmGAt52E)](https://travis-ci.com/interfirm/configs)
+[![Build Status](https://travis-ci.org/interfirm/configs.svg)](https://travis-ci.org/interfirm/configs)
 
 # INTERFIRM Configs
 
