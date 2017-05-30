@@ -333,8 +333,8 @@ eslint-config-airbnb@^15.0.0:
     eslint-config-airbnb-base "^11.2.0"
 
 eslint-config-interfirm@*:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-interfirm/-/eslint-config-interfirm-3.0.0.tgz#a7d0c18dbb0ac22e4957cce5883f2457dcfe1564"
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-interfirm/-/eslint-config-interfirm-3.1.0.tgz#32e63796388f839f7a04a824c852ce4810870b61"
   dependencies:
     eslint-config-airbnb "^15.0.0"
     eslint-plugin-import "^2.2.0"
