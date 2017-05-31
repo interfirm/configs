@@ -4,6 +4,7 @@ set -eux
 WORKDIR=tmp
 
 # setup
+tarball=$(npm pack)
 rm -rf $WORKDIR
 mkdir $WORKDIR
 cd $WORKDIR
@@ -20,7 +21,7 @@ assert() {
   test -f .rubocop.base.yml
 }
 
-npm install --no-progress --save-dev "file:$(dirname $(pwd))"
+npm install --no-progress --save-dev "../$tarball"
 cat package.json
 assert
 
@@ -33,3 +34,4 @@ assert
 # teardown
 cd ..
 rm -rf $WORKDIR
+rm $tarball
