@@ -4,12 +4,12 @@ AllCops:
   Exclude:
     - "bin/**/*"
     - "db/schema.rb"
-    - "config/**/*"
     - "log/**/*"
     - "public/**/*"
     - "tmp/**/*"
     - "vendor/**/*"
     - "node_modules/**/*"
+    - !ruby/regexp /config\/(?!routes\.rb$).*/
   UseCache: true
   DisplayCopNames: true
   DisplayStyleGuide: true
