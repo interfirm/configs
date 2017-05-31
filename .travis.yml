@@ -6,6 +6,9 @@ script:
   - yarn lint
   - yarn test
 
+after_failure:
+  - cat /home/travis/.npm/_logs/*-debug.log
+
 notifications:
   email: false
   slack: interfirm:L2WhP1umnVtkeYcz6Uedkocs#developer
