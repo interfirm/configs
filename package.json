@@ -20,6 +20,9 @@
     "lint": "eslint --ignore-path=.gitignore --fix . bin/*",
     "test": "node test.js && ./install.test.sh"
   },
+  "dependencies": {
+    "fs-extra": "*"
+  },
   "devDependencies": {
     "eslint": "*",
     "eslint-config-interfirm": "*"

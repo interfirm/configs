@@ -1,4 +1,5 @@
 const fs = require("fs")
+const fse = require("fs-extra")
 const path = require("path")
 const configFiles = require("./config-files")
 
@@ -13,10 +14,6 @@ const DEFAULT_CONFIG = {
   codeclimate: true,
   rubocop: true,
   editorconfig: true,
-}
-
-const copyFile = (src, dest) => {
-  fs.createReadStream(src).pipe(fs.createWriteStream(dest))
 }
 
 /**
@@ -53,7 +50,7 @@ const syncConfigFiles = (userRepoDir, userConfig, allConfigs) => {
     const destPath = path.join(userRepoDir, destFile || defaultPath)
 
     console.log(`Sync config: ${destPath}`)
-    copyFile(srcPath, destPath)
+    fse.copySync(srcPath, destPath)
   })
 }
 
