@@ -2,7 +2,6 @@ AllCops:
   TargetRubyVersion: 2.3
   TargetRailsVersion: 5.0
   Exclude:
-    - "bin/**/*"
     - "db/schema.rb"
     - "log/**/*"
     - "public/**/*"
