@@ -60,7 +60,8 @@ If you omit `destinationPath`, config files are copied to default path.
 Example:
 
 ``` sh
+$ git checkout master
+$ git pull
 $ yarn version
-$ git push origin master
-$ git push --tags
+$ git push --follow-tags
 ```
