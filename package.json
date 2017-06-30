@@ -1,6 +1,6 @@
 {
   "name": "@interfirm/configs",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "Manage common config files for interfirm projects",
   "main": "index.js",
   "repository": "interfirm/configs",
