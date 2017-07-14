@@ -11,7 +11,7 @@ after_failure:
 
 notifications:
   email: false
-  slack: interfirm:L2WhP1umnVtkeYcz6Uedkocs#developer
+  slack: interfirm:nQ2iFItAwPADePQlPgmcVE2D#developer
 
 deploy:
   provider: npm
