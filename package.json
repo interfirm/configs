@@ -19,15 +19,21 @@
     "postinstall": "bin/configs-sync",
     "lint": "eslint --ignore-path=.gitignore .",
     "test": "node test.js && ./install.test.sh",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "commitmsg": "commitlint -e"
   },
   "lint-staged": {
-    "*.js": ["eslint --fix", "git add"]
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
   },
   "dependencies": {
     "fs-extra": "*"
   },
   "devDependencies": {
+    "@commitlint/cli": "*",
+    "@commitlint/config-angular": "*",
     "eslint": "*",
     "eslint-config-interfirm": "*",
     "husky": "*",
