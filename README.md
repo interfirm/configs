@@ -1,7 +1,7 @@
+# INTERFIRM Configs
+
 [![NPM version](https://img.shields.io/npm/v/@interfirm/configs.svg)](https://www.npmjs.com/package/@interfirm/configs)
 [![Build Status](https://travis-ci.org/interfirm/configs.svg)](https://travis-ci.org/interfirm/configs)
-
-# INTERFIRM Configs
 
 This repository manages common config files for INTERFIRM projects.
 All config files are in `/templates` directory.
@@ -9,17 +9,18 @@ All config files are in `/templates` directory.
 ## Usage
 
 1. Edit `@interfirm/configs` entry in `package.json`.
-2. Install via `npm` or `yarn`:
+1. Install via `npm` or `yarn`:
 
-```
+```sh
 npm install --save-dev @interfirm/configs
 ```
 
-```
+```sh
 yarn add --dev @interfirm/configs
 ```
 
-This package automatically copies config files to the installed repository when downloaded into your `node_modules`.
+This package automatically copies config files to the installed repository
+when downloaded into your `node_modules`.
 
 ## Configuration
 
@@ -46,22 +47,22 @@ If you omit `destinationPath`, config files are copied to default path.
 
 | service/tool | key | default path |
 | --- | --- | --- |
-| [reek](https://github.com/troessner/reek) | reek | .config.reek |
+| [Reek](https://github.com/troessner/reek) | reek | .config.reek |
 | [Code Climate](https://codeclimate.com/) | codeclimate | .codeclimate.yml |
-| [Rubocop](https://github.com/bbatsov/rubocop) | rubocop | .rubocop.yml |
+| [RuboCop](https://github.com/bbatsov/rubocop) | rubocop | .rubocop.yml |
 | [EditorConfig](http://editorconfig.org/) | editorconfig | .editorconfig |
 
 ## Release
 
 1. Run [`yarn version`](https://yarnpkg.com/en/docs/cli/version) command.
-2. Push new tag to remote repository.
-3. New version will be published by Travis automatically.
+1. Push new tag to remote repository.
+1. New version will be published by Travis automatically.
 
 Example:
 
-``` sh
-$ git checkout master
-$ git pull
-$ yarn version
-$ git push --follow-tags
+```sh
+git checkout master
+git pull
+yarn version
+git push --follow-tags
 ```
