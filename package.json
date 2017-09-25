@@ -17,14 +17,20 @@
   ],
   "scripts": {
     "postinstall": "bin/configs-sync",
-    "lint": "eslint --ignore-path=.gitignore --fix . bin/*",
-    "test": "node test.js && ./install.test.sh"
+    "lint": "eslint --ignore-path=.gitignore .",
+    "test": "node test.js && ./install.test.sh",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": ["eslint --fix", "git add"]
   },
   "dependencies": {
     "fs-extra": "*"
   },
   "devDependencies": {
     "eslint": "*",
-    "eslint-config-interfirm": "*"
+    "eslint-config-interfirm": "*",
+    "husky": "*",
+    "lint-staged": "*"
   }
 }
