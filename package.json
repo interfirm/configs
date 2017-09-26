@@ -7,6 +7,9 @@
   "homepage": "https://github.com/interfirm/configs",
   "bugs": "https://github.com/interfirm/configs/issues",
   "license": "MIT",
+  "engines": {
+    "node": ">=8.5"
+  },
   "bin": {
     "configs-sync": "bin/configs-sync"
   },
@@ -28,9 +31,7 @@
       "git add"
     ]
   },
-  "dependencies": {
-    "fs-extra": "*"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@commitlint/cli": "*",
     "@commitlint/config-angular": "*",
