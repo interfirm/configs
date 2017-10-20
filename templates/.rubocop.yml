@@ -31,6 +31,9 @@ Style/TrailingCommaInArguments:
 Style/AsciiComments:
   Enabled: false
 
+Style/NumericPredicate:
+  Enabled: false
+
 Layout/DotPosition:
   Enabled: true
   EnforcedStyle: trailing
