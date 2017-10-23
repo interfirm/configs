@@ -15,6 +15,13 @@ AllCops:
 Rails:
   Enabled: true
 
+Rails/UnknownEnv:
+  Environments:
+    - development
+    - test
+    - production
+    - staging
+
 # Top-level class documentation comment is unnecessary in most cases
 Style/Documentation:
   Enabled: false
