@@ -549,8 +549,8 @@ eslint-module-utils@^2.1.1:
     pkg-dir "^1.0.0"
 
 eslint-plugin-eslint-comments@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-eslint-comments/-/eslint-plugin-eslint-comments-1.0.3.tgz#29443862c1a27219bf41342099ee951f9966004c"
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-eslint-comments/-/eslint-plugin-eslint-comments-1.1.0.tgz#98e3784f0508b185260ea54491024bbaad54c5fa"
   dependencies:
     escape-string-regexp "^1.0.5"
 
@@ -602,8 +602,8 @@ eslint-scope@^3.7.1:
     estraverse "^4.1.1"
 
 eslint@*:
-  version "4.9.0"
-  resolved "https://registry.yarnpkg.com/eslint/-/eslint-4.9.0.tgz#76879d274068261b191fe0f2f56c74c2f4208e8b"
+  version "4.10.0"
+  resolved "https://registry.yarnpkg.com/eslint/-/eslint-4.10.0.tgz#f25d0d7955c81968c2309aa5c9a229e045176bb7"
   dependencies:
     ajv "^5.2.0"
     babel-code-frame "^6.22.0"
@@ -1065,8 +1065,8 @@ js-yaml@^3.4.3, js-yaml@^3.9.0, js-yaml@^3.9.1:
     esprima "^4.0.0"
 
 jschardet@^1.4.2:
-  version "1.5.1"
-  resolved "https://registry.yarnpkg.com/jschardet/-/jschardet-1.5.1.tgz#c519f629f86b3a5bedba58a88d311309eec097f9"
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/jschardet/-/jschardet-1.6.0.tgz#c7d1a71edcff2839db2f9ec30fc5d5ebd3c1a678"
 
 json-schema-traverse@^0.3.0:
   version "0.3.1"
