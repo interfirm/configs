@@ -34,7 +34,7 @@
   "dependencies": {},
   "devDependencies": {
     "@commitlint/cli": "*",
-    "@commitlint/config-angular": "*",
+    "@commitlint/config-angular": "4",
     "eslint": "*",
     "eslint-config-interfirm": "*",
     "husky": "*",
