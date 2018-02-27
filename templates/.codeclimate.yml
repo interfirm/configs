@@ -23,7 +23,8 @@ plugins:
     enabled: true
     config:
       languages:
-      - ruby
+        ruby:
+          mass_threshold: 30
   fixme:
     enabled: true
 exclude_patterns:
