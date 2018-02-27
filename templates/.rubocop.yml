@@ -55,7 +55,7 @@ Metrics/LineLength:
 
 Metrics/ClassLength:
   Enabled: true
-  Max: 100
+  Max: 200
   Exclude:
     - "test/**/*"
     - "spec/**/*"
@@ -63,7 +63,7 @@ Metrics/ClassLength:
 Metrics/MethodLength:
   Enabled: true
   CountComments: false
-  Max: 20
+  Max: 50
   Exclude:
     - "test/**/*"
     - "spec/**/*"
