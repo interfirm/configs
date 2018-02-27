@@ -1,5 +1,16 @@
----
-engines:
+version: "2"
+checks:
+  argument-count:
+    enabled: false
+  file-lines:
+    enabled: false
+  method-count:
+    enabled: false
+  method-lines:
+    enabled: false
+  return-statements:
+    enabled: false
+plugins:
   brakeman:
     enabled: true
   bundler-audit:
@@ -12,22 +23,11 @@ engines:
     enabled: true
     config:
       languages:
-      - ruby
+        ruby:
+          mass_threshold: 30
   fixme:
     enabled: true
-ratings:
-  paths:
-  - Gemfile.lock
-  - "**.erb"
-  - "**.haml"
-  - "**.rb"
-  - "**.rhtml"
-  - "**.slim"
-  - "**.inc"
-  - "**.js"
-  - "**.jsx"
-  - "**.module"
-exclude_paths:
+exclude_patterns:
 - config/**/*
 - db/**/*
 - vendor/**/*
