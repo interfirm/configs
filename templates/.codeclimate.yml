@@ -1,5 +1,5 @@
----
-engines:
+version: "2"
+plugins:
   brakeman:
     enabled: true
   bundler-audit:
@@ -15,19 +15,7 @@ engines:
       - ruby
   fixme:
     enabled: true
-ratings:
-  paths:
-  - Gemfile.lock
-  - "**.erb"
-  - "**.haml"
-  - "**.rb"
-  - "**.rhtml"
-  - "**.slim"
-  - "**.inc"
-  - "**.js"
-  - "**.jsx"
-  - "**.module"
-exclude_paths:
+exclude_patterns:
 - config/**/*
 - db/**/*
 - vendor/**/*
