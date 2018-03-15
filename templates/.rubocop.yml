@@ -85,3 +85,7 @@ Metrics/AbcSize:
   Exclude:
     - "test/**/*"
     - "spec/**/*"
+
+Naming/UncommunicativeMethodParamName:
+  Enabled: true
+  MinNameLength: 1
