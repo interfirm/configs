@@ -64,6 +64,13 @@ Metrics/ClassLength:
     - "test/**/*"
     - "spec/**/*"
 
+Metrics/ModuleLength:
+  Enabled: true
+  Max: 200
+  Exclude:
+    - "test/**/*"
+    - "spec/**/*"
+
 Metrics/MethodLength:
   Enabled: true
   CountComments: false
