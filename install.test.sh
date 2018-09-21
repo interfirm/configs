@@ -15,18 +15,19 @@ mv package.json.new package.json
 # test
 assert() {
   test -f .codeclimate.yml
-  test -f .config.reek
+  test -f .reek.yml
   test -f .editorconfig
   test ! -f .rubocop.yml
   test -f .rubocop.base.yml
 }
 
-npm install --no-progress --save-dev "file:../$tarball"
+npm install --no-package-lock --no-progress --save-dev "file:../$tarball"
 cat package.json
 assert
 
 yarn install --no-progress
 assert
+ls
 
 yarn upgrade --no-progress
 assert

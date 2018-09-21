@@ -1,0 +1,53 @@
+# https://github.com/troessner/reek
+# https://docs.codeclimate.com/docs/reek
+
+detectors:
+  # duplicated with RuboCop
+  LongParameterList:
+    enabled: false
+  UnusedParameters:
+    enabled: false
+  IrresponsibleModule:
+    enabled: false
+
+  FeatureEnvy:
+    enabled: false
+  UtilityFunction:
+    enabled: false
+  NilCheck:
+    enabled: false
+  UncommunicativeParameterName:
+    enabled: false
+  UncommunicativeVariableName:
+    enabled: false
+  DuplicateMethodCall:
+    enabled: false
+  MissingSafeMethod:
+    enabled: false
+  TooManyStatements:
+    enabled: false
+  NestedIterators:
+    max_allowed_nesting: 3
+
+directories:
+  # https://github.com/troessner/reek#working-with-rails
+  "app/controllers":
+    IrresponsibleModule:
+      enabled: false
+    NestedIterators:
+      max_allowed_nesting: 2
+    UnusedPrivateMethod:
+      enabled: false
+    InstanceVariableAssumption:
+      enabled: false
+  "app/helpers":
+    IrresponsibleModule:
+      enabled: false
+    UtilityFunction:
+      enabled: false
+  "app/mailers":
+    InstanceVariableAssumption:
+      enabled: false
+  "test":
+    InstanceVariableAssumption:
+      enabled: false

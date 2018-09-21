@@ -47,7 +47,7 @@ If you omit `destinationPath`, config files are copied to default path.
 
 | service/tool | key | default path |
 | --- | --- | --- |
-| [Reek](https://github.com/troessner/reek) | reek | .config.reek |
+| [Reek](https://github.com/troessner/reek) | reek | .reek.yml |
 | [Code Climate](https://codeclimate.com/) | codeclimate | .codeclimate.yml |
 | [RuboCop](https://github.com/bbatsov/rubocop) | rubocop | .rubocop.yml |
 | [EditorConfig](http://editorconfig.org/) | editorconfig | .editorconfig |
