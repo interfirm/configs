@@ -27,7 +27,7 @@ fs.writeFileSync(".rubocop.yml", "---")
 
 executeSync(process.cwd())
 
-assert(fs.existsSync(".config.reek"))
+assert(fs.existsSync(".reek.yml"))
 assert(!fs.existsSync(".codeclimate.yml"))
 assert(fs.existsSync(".rubocop.yml"))
 assert(fs.readFileSync(".rubocop.yml", "utf8") === "---")

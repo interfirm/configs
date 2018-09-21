@@ -1,6 +1,6 @@
 module.exports = {
   editorconfig: ".editorconfig",
   rubocop: ".rubocop.yml",
-  reek: ".config.reek",
+  reek: ".reek.yml",
   codeclimate: ".codeclimate.yml",
 }
