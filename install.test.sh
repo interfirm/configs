@@ -21,12 +21,13 @@ assert() {
   test -f .rubocop.base.yml
 }
 
-npm install --no-progress --save-dev "file:../$tarball"
+npm install --no-package-lock --no-progress --save-dev "file:../$tarball"
 cat package.json
 assert
 
 yarn install --no-progress
 assert
+ls
 
 yarn upgrade --no-progress
 assert
