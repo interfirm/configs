@@ -17,7 +17,8 @@ notifications:
 
 deploy:
   provider: npm
-  email: register@interfirm.co.jp
-  api_key: $NPM_TOKEN
   on:
     tags: true
+  email: register@interfirm.co.jp
+  api_key:
+    secure: SXJlXgwq/Gf9nyQFius9hXhFqeKh3SMQs0SCigQv1BPrQ3Qx8F3cBFTd4GqZ8j+KJ5/AO3b+fXHwinF0xpOE7762pY0IoW1lrfrB1Nb1ITM6s+8kVVxnePy91sdhbSE1c4Bn4e/hgIYGrto31H6roPCOO0Qe0UVOerLj9ag1T3V6it2YtmJjqQhIcwhORHr2OOTSpDGg+hRJEoDj7nmwNvaPMCHjS8SLriQAXL5trrC5YLG6BX1MtuBOplc7EFAufp6lvH+iLCjBBhrsPalX6j0dr+YFfCGsNeGUFk+P6zdKt7D3HjrPkSJxqn3mU5SS3aSWrKelL1lw59PwZ/VlRzKSO1ybuIW6yX4jv9hkgOxZ3X4avi8XQTTQNG73AeWp99mu7hqgqPQJ4t4tPXHY6mg708TIEE91qP1eMSmcTLCDMTHQX2AdbEdjHOwWPm8PABEKO2d0uFnZCunWL8HaToUNRbrIs2+NDFyaciH849kwwG+gtRYeRPhGDvc/lsUmI8EwJ0IzAAPESfuxO/SSAAbHQ5ayYiUxx3lwd7LqsRrE+EuCbWBDG4vAzWtreD2BLE6vbyN6d14RNt/zCf9wR/e/8fAu2Bvp2wAs5rxmyRjb6zeIkL+0NDCdMstI4V3CVE5jh9ONS9sBgCxvHOzmsFG/lDHM/iHqrtA38k8kSk0=
