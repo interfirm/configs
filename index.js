@@ -18,7 +18,7 @@ const DEFAULT_CONFIG = {
 /**
  * Find a nearest parent directory which has a package.json
  */
-const findNearestNodeDir = (dir) => {
+const findNearestNodeDir = dir => {
   if (fs.existsSync(path.join(dir, PACKAGE_JSON))) {
     return dir
   }
@@ -34,7 +34,7 @@ const normalizeOption = option => (Array.isArray(option) ? option : [option, nul
  * Copy each config file to the user repository.
  */
 const syncConfigFiles = (userRepoDir, userConfig, allConfigs) => {
-  Object.keys(userConfig).forEach((key) => {
+  Object.keys(userConfig).forEach(key => {
     if (!(key in allConfigs)) {
       throw new Error(`Invalid config file key: ${key}`)
     }
@@ -56,7 +56,7 @@ const syncConfigFiles = (userRepoDir, userConfig, allConfigs) => {
 /**
  * Execute synchronization.
  */
-const executeSync = (parentDir) => {
+const executeSync = parentDir => {
   const userRepoDir = findNearestNodeDir(parentDir)
 
   if (userRepoDir == null) {
