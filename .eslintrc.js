@@ -1,7 +1,7 @@
 module.exports = {
-  "root": true,
-  "extends": ["interfirm/base"],
-  "rules": {
+  root: true,
+  extends: ["interfirm", "prettier"],
+  rules: {
     "no-console": "off",
   },
 }
