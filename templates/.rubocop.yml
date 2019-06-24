@@ -8,6 +8,7 @@ AllCops:
     - "vendor/**/*"
     - "node_modules/**/*"
     - !ruby/regexp /config\/(?!routes\.rb$).*/
+    - !ruby/regexp /db\/migrate\/.+\/.*/
   UseCache: true
   DisplayCopNames: true
   DisplayStyleGuide: true
