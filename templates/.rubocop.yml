@@ -63,14 +63,14 @@ Metrics/LineLength:
 
 Metrics/ClassLength:
   Enabled: true
-  Max: 200
+  Max: 400
   Exclude:
     - "test/**/*"
     - "spec/**/*"
 
 Metrics/ModuleLength:
   Enabled: true
-  Max: 200
+  Max: 400
   Exclude:
     - "test/**/*"
     - "spec/**/*"
@@ -92,10 +92,14 @@ Metrics/BlockLength:
 
 Metrics/AbcSize:
   Enabled: true
-  Max: 25
+  Max: 50
   Exclude:
     - "test/**/*"
     - "spec/**/*"
+
+Metrics/CyclomaticComplexity:
+  Enabled: true
+  Max: 24
 
 Naming/UncommunicativeMethodParamName:
   Enabled: true
