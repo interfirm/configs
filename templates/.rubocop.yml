@@ -8,6 +8,7 @@ AllCops:
     - "vendor/**/*"
     - "node_modules/**/*"
     - !ruby/regexp /config\/(?!routes\.rb$).*/
+    - !ruby/regexp /db\/migrate\/.+\/.*/
   UseCache: true
   DisplayCopNames: true
   DisplayStyleGuide: true
@@ -49,6 +50,10 @@ Layout/DotPosition:
   Enabled: true
   EnforcedStyle: trailing
 
+Layout/MultilineMethodCallIndentation:
+  Enabled: true
+  EnforcedStyle: indented
+
 Style/StringLiterals:
   Enabled: true
   EnforcedStyle: double_quotes
@@ -59,14 +64,14 @@ Metrics/LineLength:
 
 Metrics/ClassLength:
   Enabled: true
-  Max: 200
+  Max: 400
   Exclude:
     - "test/**/*"
     - "spec/**/*"
 
 Metrics/ModuleLength:
   Enabled: true
-  Max: 200
+  Max: 400
   Exclude:
     - "test/**/*"
     - "spec/**/*"
@@ -88,10 +93,14 @@ Metrics/BlockLength:
 
 Metrics/AbcSize:
   Enabled: true
-  Max: 25
+  Max: 50
   Exclude:
     - "test/**/*"
     - "spec/**/*"
+
+Metrics/CyclomaticComplexity:
+  Enabled: true
+  Max: 24
 
 Naming/UncommunicativeMethodParamName:
   Enabled: true
