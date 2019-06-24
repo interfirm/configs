@@ -49,6 +49,10 @@ Layout/DotPosition:
   Enabled: true
   EnforcedStyle: trailing
 
+Layout/MultilineMethodCallIndentation:
+  Enabled: true
+  EnforcedStyle: indented
+
 Style/StringLiterals:
   Enabled: true
   EnforcedStyle: double_quotes
