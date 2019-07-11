@@ -1,0 +1,61 @@
+version: '2.1'
+
+workflows:
+  build:
+    jobs:
+      - test:
+          filters:
+            # デフォルトだとタグでは発火しないので、明示的に filter を指定する必要がある。
+            # https://circleci.com/docs/2.0/workflows/#executing-workflows-for-a-git-tag
+            tags:
+              only: /.*/
+      - release:
+          requires:
+            - test
+          filters:
+            tags:
+              only: /v[0-9.]+/
+            branches:
+              ignore: /.*/
+
+jobs:
+  test:
+    executor: node
+    steps:
+      - checkout
+      - yarn_install
+      - run: yarn lint
+      - run: yarn test
+      - persist_to_workspace:
+          root: ~/repo
+          paths: .
+
+  release:
+    executor: node
+    steps:
+      - attach_workspace:
+          at: ~/repo
+      - run:
+          # https://circleci.com/blog/publishing-npm-packages-using-circleci-2-0/
+          name: Authenticate with registry
+          command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/repo/.npmrc
+      - run: npm publish
+
+executors:
+  node:
+    docker:
+      - image: circleci/node:10.15.3
+    working_directory: ~/repo
+
+commands:
+  yarn_install:
+    steps:
+      - run: yarn --version
+      - restore_cache:
+          keys:
+            - yarn-{{ checksum "yarn.lock" }}
+      - run: yarn install
+      - save_cache:
+          key: yarn-{{ checksum "yarn.lock" }}
+          paths:
+            - node_modules

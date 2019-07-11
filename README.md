@@ -1,7 +1,7 @@
 # INTERFIRM Configs
 
 [![NPM version](https://img.shields.io/npm/v/@interfirm/configs.svg)](https://www.npmjs.com/package/@interfirm/configs)
-[![Build Status](https://travis-ci.org/interfirm/configs.svg)](https://travis-ci.org/interfirm/configs)
+[![CircleCI](https://circleci.com/gh/interfirm/configs.svg?style=svg)](https://circleci.com/gh/interfirm/configs)
 
 This repository manages common config files for INTERFIRM projects.
 All config files are in `/templates` directory.
