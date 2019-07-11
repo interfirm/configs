@@ -7,13 +7,18 @@ workflows:
 
 jobs:
   test:
-    docker:
-      - image: circleci/node:10.15.3
+    executor: node
     steps:
       - checkout
       - yarn_install
       - run: yarn lint
       - run: yarn test
+
+executors:
+  node:
+    docker:
+      - image: circleci/node:10.15.3
+    working_directory: ~/repo
 
 commands:
   yarn_install:
