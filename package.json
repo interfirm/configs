@@ -41,5 +41,8 @@
     "eslint-config-prettier": "^3",
     "husky": "*",
     "lint-staged": "*"
+  },
+  "resolutions": {
+    "**/lodash": "4.17.13"
   }
 }
